@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Participante</title>
+</head>
+<body>
+    <h2>Eliminar Participante de un Torneo</h2>
+    <form action="/proyectoFinal/proyectoFinal/app/torneos/eliminar_participante.php" method="POST">
+        <label for="torneo">Selecciona un Torneo:</label>
+        <select id="torneo" name="torneo_id" required>
+            <option value=""> Selecciona un Torneo </option>
+        </select>
+
+        <label for="participante">Selecciona un Participante:</label>
+        <select id="participante" name="dni_participante" required>
+            <option value=""> Primero elige un Torneo </option>
+        </select>
+
+        <button type="submit">Eliminar Participante</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../app/torneos/obtener_torneos.php")
+                .then(response => response.json())
+                .then(data => {
+                    const torneoSelect = document.getElementById("torneo");
+                    data.forEach(torneo => {
+                        let option = document.createElement("option");
+                        option.value = torneo.id;
+                        option.textContent = torneo.nombre;
+                        torneoSelect.appendChild(option);
+                    });
+                });
+
+            document.getElementById("torneo").addEventListener("change", function() {
+                const torneoId = this.value;
+                const participanteSelect = document.getElementById("participante");
+
+                participanteSelect.innerHTML = "<option value=''>-- Cargando participantes... --</option>";
+
+                if (torneoId) {
+                    fetch(`../app/torneos/obtener_participantes.php?torneo_id=${torneoId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            participanteSelect.innerHTML = "<option value=''>Selecciona un Participante</option>";
+                            data.forEach(participante => {
+                                let option = document.createElement("option");
+                                option.value = participante.dni;
+                                option.textContent = `${participante.nombre} (${participante.dni})`; // Mostrar nombre y DNI
+                                participanteSelect.appendChild(option);
+                            });
+                        });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

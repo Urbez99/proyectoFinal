@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Torneo</title>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Registrar Nuevo Torneo</h2>
+        <form action="/proyectoFinal/proyectoFinal/app/torneos/registrar_torneo.php" method="POST">
+            <label for="nombre">Nombre del Torneo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="tipo">Tipo de Torneo:</label>
+            <select id="tipo" name="tipo" required>
+                <option value="con_votacion">Con Votación</option>
+                <option value="sin_votacion">Sin Votación</option>
+            </select>
+
+            <button type="submit">Registrar Torneo</button>
+        </form>
+    </div>
+</body>
+
+</html>

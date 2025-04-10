@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .message {
+            padding: 20px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            background-color: #f0ad4e; /* Amarillo como predeterminado */
+            color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .message a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message" id="message">
+        <h2 id="messageType">Error</h2>
+        <p id="messageText">Mensaje de error.</p>
+        <p><a href="index.html" id="redirectLink">Volver</a></p>
+    </div>
+
+    <script>
+        // Recupera los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tipo = urlParams.get('tipo') || 'error';
+        const mensaje = urlParams.get('mensaje') || 'Hubo un problema.';
+        const redirect = urlParams.get('redirect') || 'index.html';
+
+        // Definir colores según el tipo de mensaje
+        const colores = {
+            'error': '#d9534f',  // Rojo
+            'exito': '#5cb85c',  // Verde
+            'info': '#5bc0de'    // Azul
+        };
+
+        // Cambia los elementos en el HTML según los parámetros
+        document.getElementById('messageType').textContent = tipo.charAt(0).toUpperCase() + tipo.slice(1);
+        document.getElementById('messageText').textContent = mensaje;
+        document.getElementById('redirectLink').setAttribute('href', redirect);
+        document.getElementById('message').style.backgroundColor = colores[tipo] || '#f0ad4e'; // Amarillo si no es un tipo reconocido
+    </script>
+
+</body>
+</html>

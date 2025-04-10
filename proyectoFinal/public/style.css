@@ -1,0 +1,188 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8e6e6; /* Fondo rojo muy suave */
+    color: #4a1c1c; /* Rojo oscuro para los textos */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+header {
+    background-color: #c0392b; /* Rojo fuerte */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #a93226; /* Rojo medio */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #922b21; /* Rojo más oscuro */
+}
+
+/* Sección principal */
+section {
+    background-color: white;
+    width: 60%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #b03a2e;
+}
+
+/* Formularios */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input, form select, form button {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #c0392b;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #922b21;
+}
+
+/*Inscripcion de gente en torneos*/
+.feedback {
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.feedback.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.feedback.exito {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+
+/*Estilo del listado de torneos*/
+.torneo {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.torneo p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.torneo h4 {
+    color: #b22222;
+    margin-top: 10px;
+}
+
+/* Estilo de los participantes */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo del botón */
+.button {
+    background-color: #b22222;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #900c00;
+}
+
+/* Estilo cuando no hay torneos */
+.no-torneos {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* Pie de página */
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #c0392b;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
