@@ -21,7 +21,6 @@ if ($rol_usuario != "usuario") {
 
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="style.css">
 
 <head>
     <meta charset="UTF-8">
@@ -37,16 +36,17 @@ if ($rol_usuario != "usuario") {
 
     <nav>
         <ul>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/public/formulario_inscripcion.html">Inscribirse en Torneo</a></li>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/public/resultados.php">Ver Resultados</a></li>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/public/formulario_votacion.html">Votar en Concursos</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/public/formulario_inscripcion.html">Inscribirse en Torneo</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/public/resultados.php">Ver Resultados</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/public/formulario_votacion.html">Votar en Concursos</a></li>
             <!-- <li><a href="ver_clasificacion.php">Ver Clasificación</a></li> -->
         </ul>
     </nav>
 
+    
+
     <section>
-        <h2>Torneos Abiertos</h2>
-        <p>Aquí están los Torneos Abiertos.</p>
+        <h1> <p>Torneos Activos</p> </h1>
         <ul>
             <?php
             include '../db.php'; // Incluir la conexión a la base de datos
@@ -71,8 +71,7 @@ if ($rol_usuario != "usuario") {
 
 
     <section>
-        <h2>Clasificación General</h2>
-        <p>Aquí puedes ver la clasificación de los torneos anteriores.</p>
+        <h1><p>Aquí puedes ver la clasificación de los torneos anteriores.</p></h1>
         <ul>
             <?php
             // Consultar las clasificaciones de torneos anteriores
@@ -95,6 +94,10 @@ if ($rol_usuario != "usuario") {
             $conexion->close();
             ?>
         </ul>
+    </section>
+
+    <section>
+        <a href="/proyectoFinal/proyectoFinal/public/index.html" class="logout-btn">Cerrar Sesión</a>
     </section>
 
     <footer>

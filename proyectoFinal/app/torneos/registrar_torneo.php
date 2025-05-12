@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Torneo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 // Incluir el archivo de conexión a la base de datos con verificación
 $dbPath = $_SERVER['DOCUMENT_ROOT'] . "/proyectoFinal/proyectoFinal/app/db.php";
@@ -55,3 +64,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Método no permitido.";
 }
 ?>
+</body>
+</html>

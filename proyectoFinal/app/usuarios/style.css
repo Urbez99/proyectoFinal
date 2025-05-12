@@ -63,9 +63,15 @@ section {
     text-align: center;
 }
 
-h2 {
-    color: #fdfdfd;
+section h2 {
+    color: #b22222; /* Rojo más fuerte para distinguir sobre blanco */
+    font-size: 26px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b22222;
+    padding-bottom: 5px;
 }
+
+
 
 /* Formularios */
 form {
@@ -118,7 +124,6 @@ form button:hover {
     background-color: #d4edda;
     color: #155724;
 }
-
 
 /*Estilo del listado de torneos*/
 .torneo {
@@ -175,7 +180,6 @@ li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
 
 /* Pie de página */
 footer {

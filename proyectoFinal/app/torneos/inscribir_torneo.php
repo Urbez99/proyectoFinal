@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscribir Torneo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 include '../db.php'; // Conectar a la base de datos
 
@@ -40,3 +49,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Método no permitido.";
 }
 ?>
+</body>
+</html>

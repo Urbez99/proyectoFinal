@@ -29,16 +29,16 @@ if (!isset($_SESSION["rol"]) || $_SESSION["rol"] !== "admin") {
 
     <nav>
         <ul>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/public/formulario_registro_torneo.html">Registrar Torneo</a></li>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/public/formulario_eliminar_participante.html">Eliminar Participante</a></li>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/public/cerrar_torneo.php">Cerrar Torneo</a></li>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/public/resultados.php">Ver Resultados</a></li>
-            <li><a href="http://localhost/proyectoFinal/proyectoFinal/app/torneos/listado_torneos.php">Ver Torneos Activos</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/public/formulario_registro_torneo.html">Registrar Torneo</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/public/formulario_eliminar_participante.html">Eliminar Participante</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/public/cerrar_torneo.php">Cerrar Torneo</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/public/resultados.php">Ver Resultados</a></li>
+            <li><a href="/proyectoFinal/proyectoFinal/app/torneos/listado_torneos.php">Ver Torneos Activos</a></li>
         </ul>
     </nav>
 
     <section>
-        <a href="http://localhost/proyectoFinal/proyectoFinal/public/index.html" class="logout-btn">Cerrar Sesión</a>
+        <a href="/proyectoFinal/proyectoFinal/public/index.html" class="logout-btn">Cerrar Sesión</a>
     </section>
 
 
